@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        .profile_ {
+            width: 100%;
+            height: 100%;
+        }
+        .header_ {
+            width: 100%;
+            height: 200px;
+            background-color: #f1f1f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+        img {
+            width: 80px;
+            border-radius: 50px;
+        }
+        .section_ {
+            width: 100%;
+            background-color: #fff;
+        }
+        .descripition_ {
+            margin: 80px 400px;
+            line-height: 2;
+        }
+        .animation_ {
+            display: flex;
+            margin: 80px 400px;            
+            align-items: center;
+            justify-content: center;
+        }
+        .gif_ {
+            width: 300px;
+            height: 150px;
+            border: 1px solid red;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 5px;
+        }
+        /* 爱心动效一 */
+        .gif_heartBbeat {
+            height: 100px;
+            padding-top: 50px;
+        }
+        .gif_ p {
+            position: absolute;
+            bottom: -30px;
+            font-size: 14px;
+            color: #ADABAB;
+        }
+
+        li {
+            width: 10px;
+            height: 10px;
+            float: left;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        li:nth-child(1) {
+            background-color: red;
+            animation: starBeat 5s 0s infinite;
+        }
+        li:nth-child(2) {
+            background-color: darkturquoise;
+            animation: starBeat2 5s 0.2s infinite;
+        }
+        li:nth-child(3) {
+            background-color: darksalmon;
+            animation: starBeat3 5s 0.4s infinite;
+        }
+        li:nth-child(4) {
+            background-color: deeppink;
+            animation: starBeat4 5s 0.6s infinite;
+        }
+        li:nth-child(5) {
+            background-color: yellow;
+            animation: starBeat5 5s 0.8s infinite;
+        }
+        li:nth-child(6) {
+            background-color: deeppink;
+            animation: starBeat4 5s 1s infinite;
+        }
+        li:nth-child(7) {
+            background-color: darksalmon;
+            animation: starBeat3 5s 1.2s infinite;
+        }
+        li:nth-child(8) {
+            background-color: darkturquoise;
+            animation: starBeat2 5s 1.4s infinite;
+        }
+        li:nth-child(9) {
+            background-color: red;
+            animation: starBeat 5s 1.6s infinite;
+        }
+        @keyframes starBeat{
+            30%{
+                height: 30px;
+                transform: translateY(-15px);
+            }
+
+            70%{
+                height: 10px;
+                transform: translateY(0);
+            }
+        }
+        @keyframes starBeat2 {
+            30%{
+                height: 62.5px;
+                transform: translateY(-30px);
+            }
+
+            70%{
+                height: 10px;
+                transform: translateY(0);
+            }
+        }
+        @keyframes starBeat3 {
+            30%{
+                height: 80px;
+                transform: translateY(-37.5px);
+            }
+
+            70%{
+                height: 10px;
+                transform: translateY(0);
+            }
+        }
+        @keyframes starBeat4 {
+            30%{
+                height: 90px;
+                transform: translateY(-30px);
+            }
+
+            70%{
+                height: 10px;
+                transform: translateY(0);
+            }
+        }
+        @keyframes starBeat5 {
+            30%{
+                height: 100px;
+                transform: translateY(-22.5px);
+            }
+
+            70%{
+                height: 10px;
+                transform: translateY(0);
+            }
+        }
+        /* 爱心动效二 */
+        .hearts {
+            display: flex;
+            overflow: hidden;
+            margin-right: 50px;
+        }
+        span {
+            width: 100px;
+            height: 100px;
+            margin: 100px auto;
+            position: relative;
+            animation: heartBeats 25s linear infinite;
+            animation-duration: calc(48s / var(--i));
+        }
+
+        span::before {
+            content: '';
+            width: 50px;
+            height: 80px;
+            position: absolute;
+            background-color: #fa759f;
+            border-radius: 50px 40px 0 0;
+            transform-origin: 0 100%;
+            transform: rotate(-45deg) scale(0.2);
+            box-shadow: -5px -5px 15px #d01734;
+            left: 50px;
+
+        }
+        span::after {
+            content: '';
+            width: 50px;
+            height: 80px;
+            position: absolute;
+            background-color: #fa759f;
+            border-radius: 50px 40px 0 0;
+            transform-origin: 100% 100%;
+            transform: rotate(45deg) scale(0.2);
+            
+        }
+        @keyframes heartBeats {
+            0% {
+                transform: translateY(40px);
+            }
+            100% {
+                transform: translateY(-80px);
+            }
+        }
+
+        .footer_ {
+            width: 100%;
+            height: 80px;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile_">
+        <header class="header_">
+            <img src="./profile_pic.jpeg" />
+        </header>
+        <section class="section_">
+            <div class="descripition_">
+                <p>你好啊，我是龚琪，这是我的个人网站V1.0版本，用于记录个人工作、技术与日常。</p>
+                <p>工作之余，出于兴趣爱好，我也会捣鼓一些自己的小创意，比如下面这些blingbling的动画。</p>
+                <p>如果你喜欢我的作品，欢迎收藏这个网站常回来看看，也可以在下方的github关注我呀。</p>
+                <p>《诗篇》有言："你以恩典为年岁的冠冕；你的路径都滴下脂油"，愿上帝的恩惠年年日日祝福保护着我们。</p>
+            </div>
+            <div class="animation_">
+                <div class="gif_">
+                    <ul class="gif_heartBbeat">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <p>示例一: 跳动的心</p>
+                </div>
+                <div class="gif_">
+                    <div class="hearts">
+                        <span style="--i:18"></span>
+                        <span style="--i:17"></span>
+                        <span style="--i:23"></span>
+                        <span style="--i:21"></span>
+                        <span style="--i:22"></span>
+                        <span style="--i:28"></span>
+                        <span style="--i:23"></span>
+                        <span style="--i:28"></span>
+                        <span style="--i:19"></span>
+                        <span style="--i:15"></span>
+                        <span style="--i:23"></span>
+                        <span style="--i:27"></span>
+                        <span style="--i:19"></span>
+                        <span style="--i:25"></span>
+                        <span style="--i:20"></span>
+                        <span style="--i:21"></span>
+                    </div>
+                    <p>示例二: 爱心心</p>
+                </div>
+            </div>
+        </section>
+        <footer class="footer_">
+            <a href="https://github.com/qigong77/">Github</a>
+        </footer>
+    </div>
+</body>
+</html>
